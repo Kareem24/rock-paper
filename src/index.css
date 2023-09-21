@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img {
+	@apply bg-white lg:w-28 lg:h-28 w-24 h-24  rounded-full flex items-center border-[10px] justify-center;
+}
+
+.cyan {
+	@apply border-cyanStart;
+}
+
+.rock {
+	@apply border-rockStart;
+}
+
+.scissors {
+	@apply border-scissorsStart;
+}

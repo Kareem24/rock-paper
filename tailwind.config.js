@@ -15,7 +15,16 @@ export default {
         cyanStart: 'hsl(189, 59%, 53%)',
         cyanStop: ' hsl(189, 58%, 57%)',
         scissorsStart: 'hsl(39, 89%, 49%)',
+        scissorsEnd: 'hsl(40, 84%, 53%)',
+        rockEnd: 'hsl(349, 70%, 56%)',
+        rockStart: 'hsl(349, 71%, 52%)',
+        start: 'hsl(214, 47%, 23%)',
+        end: 'hsl(237, 49%, 15%)',
+
       },
+      backgroundImage: {
+        triangle: "url('./assets/images/bg-triangle.svg')"
+      }
     },
   },
   plugins: [],
