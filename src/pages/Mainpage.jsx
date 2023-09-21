@@ -11,10 +11,10 @@ const Mainpage = () => {
         <div>
 
           <div className='m-auto flex space-x-10  items-center' >
-            <Image src={paper} color={'cyanStart'} extraStyle={' mt-[-20px]'}/>
-            <Image src={scissors} color={'scissorsStart'} extraStyle={' mt-[-20px]'}/>
+            <Image src={paper} color={'cyan'} extraStyle={' mt-[-20px]'}/>
+            <Image src={scissors} color={'scissors'} extraStyle={' mt-[-20px]'}/>
           </div>
-          <Image src={rock} color={'rockStart'} extraStyle={' ml-[70px] lg:ml-20 mt-5 '} />
+          <Image src={rock} color={'rock'} extraStyle={' ml-[70px] lg:ml-20 mt-5 '} />
         </div>
       </div>
     </>
