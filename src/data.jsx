@@ -7,18 +7,21 @@ export const data = [
     id:1,
     colorClass: 'cyan',
     img:paper,
+    name:'paper'
   
   },
   {
     id:2,
     colorClass: 'scissors',
-    img:scissors,
+    img: scissors,
+    name:'scissors'
   
   },
   {
     id: 3,
     colorClass: 'rock',
-    img:rock,
+    img: rock,
+    name:'rock'
   
 },
 

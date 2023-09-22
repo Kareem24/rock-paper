@@ -5,14 +5,40 @@ import rock from '../assets/images/icon-rock.svg'
 import Image from '../components/Image'
 import { NavLink } from 'react-router-dom'
 import { data } from '../data'
-const Mainpage = ({ setImage,setImage2 }) => {
-  const random = Math.floor( Math.random() * 3)
+const Mainpage = ({ setImage,setImage2,setWinMessage,setScore,setHousePick,setShowWinMessage }) => {
+  const random = Math.floor(Math.random() * 3)
+  const checkWin = (user,house) => {
+    if (user.name === house.name) {
+     setWinMessage('its a tie');
+      return
+    }
+    if (user.name === 'paper' && house.name !== 'rock') {
+      setWinMessage('you loose');
+      return
+    }
+    if (user.name === 'rock' && house.name !== 'scissors') {
+     setWinMessage('you loose');
+      return
+    }
+    if (user.name === 'scissors' && house.name !== 'paper') {
+     setWinMessage('you loose');
+      return
+    }
+    setWinMessage('you win');
+    setScore(score=> score+1)
+  }
+ 
   const handleClick = (e) => {
     const currTarget = e.currentTarget
     const id = currTarget.dataset.id
-    console.log(id);
     const iconSelect = data.find((item) => item.id === +id)
-    console.log(random);
+    setTimeout(() => {
+    setHousePick(true)
+      setTimeout(() => {
+        checkWin(iconSelect,data[Number(random)])
+        setShowWinMessage(true)
+      }, 1000)
+  },1000)
 
     setImage(iconSelect)
     setImage2(data[Number(random)])
