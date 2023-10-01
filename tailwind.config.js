@@ -23,7 +23,9 @@ export default {
 
       },
       backgroundImage: {
-        triangle: "url('./assets/images/bg-triangle.svg')"
+        triangle: "url('./assets/images/bg-triangle.svg')",
+        mobile: "url('./assets/design/original/mobile-rules-modal.jpg')",
+        desktop: "url('./assets/design/original/desktop-rules-modal.jpg')"
       }
     },
   },
