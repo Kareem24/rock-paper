@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+
 import { NavLink } from 'react-router-dom'
 
 const WinMessage = ({winMessage,setHousePick,setShowWinMessage}) => {

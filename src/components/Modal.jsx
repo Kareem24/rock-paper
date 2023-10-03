@@ -6,7 +6,7 @@ const Modal = ({setIsModal}) => {
     </div>
     <div className='absolute top-0 z-10 max-h-screen flex justify-center items-center w-full'>
 
-    <img src={mobile} alt="" className='w-96 h-screen' onClick={()=>{setIsModal(false)}} />
+    <img src={mobile} alt="" className='w-96 h-screen cursor-pointer' onClick={()=>{setIsModal(false)}}/>
     </div>
   </>
   )

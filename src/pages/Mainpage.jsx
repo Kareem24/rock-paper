@@ -5,23 +5,32 @@ import rock from '../assets/images/icon-rock.svg'
 import Image from '../components/Image'
 import { NavLink } from 'react-router-dom'
 import { data } from '../data'
-const Mainpage = ({ setImage,setImage2,setWinMessage,setScore,setHousePick,setShowWinMessage }) => {
+const MainPage = ({ setImage,setImage2,setWinMessage,setScore,setHousePick,setShowWinMessage ,setCompScore,setCounter,levelMsg}) => {
   const random = Math.floor(Math.random() * 3)
-  const checkWin = (user,house) => {
+  
+
+  const checkWin = (user, house) => {
+      setCounter(counter=>counter+1)
     if (user.name === house.name) {
      setWinMessage('its a tie');
       return
     }
+    
     if (user.name === 'paper' && house.name !== 'rock') {
       setWinMessage('you loose');
+      setCompScore(score=>score+1)
       return
     }
+
     if (user.name === 'rock' && house.name !== 'scissors') {
-     setWinMessage('you loose');
+      setWinMessage('you loose');
+      setCompScore(score=>score+1)
       return
     }
+
     if (user.name === 'scissors' && house.name !== 'paper') {
-     setWinMessage('you loose');
+      setWinMessage('you loose');
+      setCompScore(score=>score+1)
       return
     }
     setWinMessage('you win');
@@ -37,8 +46,8 @@ const Mainpage = ({ setImage,setImage2,setWinMessage,setScore,setHousePick,setSh
       setTimeout(() => {
         checkWin(iconSelect,data[Number(random)])
         setShowWinMessage(true)
-      }, 1000)
-  },1000)
+      }, 400)
+  },400)
 
     setImage(iconSelect)
     setImage2(data[Number(random)])
@@ -70,4 +79,5 @@ const Mainpage = ({ setImage,setImage2,setWinMessage,setScore,setHousePick,setSh
 }
 
 
-export default Mainpage
+
+export default MainPage
